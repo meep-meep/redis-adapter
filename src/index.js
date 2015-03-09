@@ -40,7 +40,7 @@ MemoryAdapter.prototype = {
         this._db.get('results')
             .then(function(results) {
                 results.push(qs);
-                return this._db.set(results);
+                return this._db.set('results', results);
             }.bind(this))
     },
 
